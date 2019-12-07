@@ -26,7 +26,8 @@ use users;
 ```javascript
 db.users.insertOne({ username: "rosaHdez", email: "rosa.hdez@email.com", Password: "nosegura", createdAt: new Date(), updatedAt: new Date() });
 
-```javascript
+```
+
 3. crear dos documentos simultaneamente:
 
 ```javascript

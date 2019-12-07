@@ -1,29 +1,21 @@
- 
+## Reto 2: 
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
-	
-## Titulo del Ejemplo 
+### Objetivo
+- Confirmar conocimientos Spring Data
+- Aplicar conocimientos previos y visualizar los resultados en MongoDB
 
-### OBJETIVO 
+### Requisitos
+- MongoDB instalado
+- JDK 8 o superior
+- IDE de tu preferencia
+- mongodb compass (Recomendado pero no necesario)
 
-- Lo que esperamos que el alumno aprenda 
+### Desarrollo
 
-#### REQUISITOS 
+Continuar desde el ejemplo02.
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+En muchas aplicaciones de la vida real hay registros de usuarios y un `login` por lo que hacer una búsqueda de usuarios dado un usuario y/o email es muy frecuente.
 
-#### DESARROLLO
+1. Con base a conocimientos previos en Spring Data crea dos métodos en el repositorio `UserRepository` para obtener `un` usuario. El primer método que lo obtenga dado el nombre de usuario y el segundo dado el email. (En este caso se omite el password por cuestiones de seguridad dependiente en un proyecto específico, p.ej encriptamiento, etc. y eso ya no corresponde al curso.)
 
-Agrega las instrucciones generales del ejemplo o reto
-
-<details>
-
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details> 
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una)
-
-![imagen](https://picsum.photos/200/300)
-
+2. Comprueba en la clase principal del proyecto, remueve el código anterior de la implementación del método run de la interfaz CommandLineRunner y ahora comprueba en este que tus métodos funcionen correctamente. Para esto Guarda dos registros con el mismo Email y verifica que solo uno es recuperado al hacer la búsqueda por email. (Existen opciones mejores, pero este ejemplo es solo con fines educativos).

@@ -1,29 +1,38 @@
- 
+## Reto 1: 
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
-	
-## Titulo del Ejemplo 
+### Objetivo
+- Comprobar conocimiento en sentencias Mongo
+- Aplicar conceptos teoricos y mejorar la comprensión del funcionamiento de MongoDB.
 
-### OBJETIVO 
+### Requisitos
+- MongoDB instalado
+- mongodb compass (Recomendado pero no necesario)
 
-- Lo que esperamos que el alumno aprenda 
+### Desarrollo
 
-#### REQUISITOS 
+Teniendo en cuenta la siguiente colección llamada `empleados`:
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+```json
+{
+    "nombre": "Jorge",
+    "apellido": "Gonzales",
+    "personasACargo": [{
+        "nombre": "Aaron",
+        "apellido": "Sotelo",
+        "cargo": "Ing. en comp.",
+        "edad": 25,
+        "personasACargo": [{
+            "nombre": "Rosa",
+            "apellido": "Soto",
+            "edad": 30
+        }]
+    }],
+    "cargo": "Gerente de sistemas"
+}
+```
 
-#### DESARROLLO
+1. Explicar por qué esta colección está correctamente estructurada teniendo en cuenta los campos `personasACargo` las dos veces que aparece y su estructura.
 
-Agrega las instrucciones generales del ejemplo o reto
+2. Escriba una consulta que inserte un documento con un `cargo: "Director comercial"` con al menos dos personas a cargo.
 
-<details>
-
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details> 
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una)
-
-![imagen](https://picsum.photos/200/300)
-
+3. Escriba una consulta que arroje las personas a cargo mayores de 30 años del gerente Jorge Gonzales.

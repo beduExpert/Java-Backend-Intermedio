@@ -1,29 +1,27 @@
- 
+## Reto 3: 
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
-	
-## Titulo del Ejemplo 
+### Objetivo
+- Reafirmar conocimientos del Ejemplo03
+- Personalizar las búsquedas a nivel sentencia MongoDB desde Spring Data MongoDB
+- Explorar algunas posibilidades del ORM.
 
-### OBJETIVO 
+### Requisitos
+- MongoDB instalado
+- JDK 8 o superior
+- IDE de tu preferencia
+- mongodb compass (Recomendado pero no necesario)
 
-- Lo que esperamos que el alumno aprenda 
+### Desarrollo
 
-#### REQUISITOS 
+A partir del proyecto ejemplo03 realice lo siguiente:
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+1. Inspecciona la clase MongoTemplate (desde el IDE o documentación) si lo requieres.
+2. comprende los métodos MongoTemplate#find y MongoTemplate#findOne
+- - Para los atributos de estas clases puedes utilizar e importar las siguientes clases de esta manera:
+```
+import org.springframework.data.mongodb.core.query.Query;
+import static org.springframework.data.mongodb.core.query.Criteria.where;
+```
+3. Reemplaza en la clase principal (Ejemplo03Application) el uso de los repositorios y en su lugar haz uso de la clase MongoTemplate y los métodos que acabas de aprender (unicamente deberían cambiar 3 líneas).
 
-#### DESARROLLO
-
-Agrega las instrucciones generales del ejemplo o reto
-
-<details>
-
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details> 
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una)
-
-![imagen](https://picsum.photos/200/300)
-
+4. verifica que el proyecto funcione igual que en el ejemplo03

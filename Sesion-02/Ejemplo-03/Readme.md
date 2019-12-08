@@ -1,28 +1,64 @@
+## Ejemplo 03: Consumo de un servicio web SOAP
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+### Objetivos
+* Aprender la forma de realizar el consumo de un SOAP en Spring
 
-## Titulo del Ejemplo
+### Prerequisitos
+* Maven
+* JDK 11
 
-### OBJETIVO
+### Procedimiento
 
-- Lo que esperamos que el alumno aprenda
+Nota: para este ejemplo ocuparemos los proyectos ejemplo que utiliza la pagina oficial de Spring par el [servidor](https://spring.io/guides/gs/producing-web-service/) y el siguiente para [cliente](https://spring.io/guides/gs/consuming-web-service/) 
 
-#### REQUISITOS
+1. Entrar a [Git](https://github.com/spring-guides/gs-soap-service.git) donde se encuentra el proyecto del servidor SOAP y clonarlo
+2. Descomprimir el proyecto
+3. Abrir el proyecto que se encuentra en la carpeta "complete" con su IDE preferido y compilarlo, otra opcion es compilarlo y correrlo con Maven:
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+    	mvnw spring-boot:run
 
-#### DESARROLLO
+4. Una vez corriento entramos a la siguinte url para ver que esta corriendo el servidor:
 
-Agrega las instrucciones generales del ejemplo o reto
+    	http://localhost:8080/ws/countries.wsdl
 
-<details>
-	<summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+5. Entrar a [Git](https://github.com/spring-guides/gs-soap-service.git) donde se encuentra el proyecto del cliente y clonarlo
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) 
+    	http://localhost:8181/index.html
 
-![imagen](https://picsum.photos/200/300)
+6. Compilarlo y correrlo con Maven:
+
+    	mvnw spring-boot:run
+
+7. En la consola debe de mostrar el siguinte mensaje de "EUR":
+
+![Consola](img/consola.png)
+
+
+Ya que el cliente esta construido para que imprima el currency de Spain
+
+```java
+    @SpringBootApplication
+    public class ConsumingWebServiceApplication {
+
+        public static void main(String[] args) {
+            SpringApplication.run(ConsumingWebServiceApplication.class, args);
+        }
+
+        @Bean
+        CommandLineRunner lookup(CountryClient quoteClient) {
+            return args -> {
+                String country = "Spain";
+
+                if (args.length > 0) {
+                    country = args[0];
+                }
+                GetCountryResponse response = quoteClient.getCountry(country);
+                System.out.println(response.getCountry().getCurrency());
+            };
+        }
+
+    }
+```
+
 
 

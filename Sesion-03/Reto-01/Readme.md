@@ -1,29 +1,23 @@
- 
+## Reto 1
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
-	
-## Titulo del Ejemplo 
+### Objetivos
+* Crear los endpoints de GET, POST, PUT y DELETE para el repository LibroRepository
 
-### OBJETIVO 
+Continuar con el proyecto del ejemplo 1 y crear la clase `LibrosController` junto con sus metodos
 
-- Lo que esperamos que el alumno aprenda 
+No olviden que al guardar un libro en el JSON debe de venir tambien el objeto de un Autor para que haga la relacion en la base de datos.
 
-#### REQUISITOS 
-
-1. Lo necesario para desarrollar el ejemplo o el Reto 
-
-#### DESARROLLO
-
-Agrega las instrucciones generales del ejemplo o reto
 
 <details>
+  <summary>Solución</summary>
 
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details> 
+  <ol>
+      <li>Creamos la clase `LibrosController`<li>
+      <li>Agregamos el atributo de LibrosRepository y lo inyectamos</li>
+      <li>Creamos los Endpoints</li>
+      <li>Ejecutamos el programa y guardamos primero un autor y despues agregamos un libro como se muestra en la imagen</li>
+       <img src="img/json.png" alt="JSON"/>
+  </ol>
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una)
-
-![imagen](https://picsum.photos/200/300)
+</details>
 

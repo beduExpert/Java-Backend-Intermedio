@@ -1,11 +1,11 @@
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]  
-
-## Titulo de la Sesion 
+## Sesión 03: Creación de servicios REST / SOAP
 
 ### OBJETIVOS 
 
-- Lo que esperamos que el alumno aprenda al finalizar la sesion 
+- Creación de Endpoints REST y SOAP
+- Manejo de errores
+- Envio de mensajes
 
 #### ORGANIZACION DE LA CLASE 
 
@@ -13,4 +13,8 @@ agrega el programa que se desarrollara con backticks> [agrega la sesion con back
 
 	- [Ejemplo 01](Ejemplo-01)
 	- [Reto 01](Reto-01)
+	- [Ejemplo 02](Ejemplo-02)
+	- [Reto 02](Reto-02)
+	- [Ejemplo 03](Ejemplo-03)
+	- [Reto 03](Reto-03)
 

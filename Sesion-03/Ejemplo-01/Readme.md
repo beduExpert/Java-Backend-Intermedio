@@ -1,28 +1,49 @@
+## Ejemplo 01: Usar MicroProfile para crear un microservicio
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+### Objetivos
+* Crear los Endpoints basicos GET, POST, PUT y DELETE
 
-## Titulo del Ejemplo
+### Prerequisitos
+* Maven
+* JDK 11
 
-### OBJETIVO
+### Procedimiento
 
-- Lo que esperamos que el alumno aprenda
+1. Descargar el proyecto llamado "rest" 
+2. Abrir el proyecto con su IDE preferido
+3. Agregamos la clase `AutorController` y colocamos la notación `@RestController` al principio de la clase.
+4. Adentro de la clase colocamos el atributo `autorRepository` de tipo `autorRepository`.
+5. Arriba de este atributo la notación `@Autowired`
+6. Colocamos los siguientes metodos:
 
-#### REQUISITOS
+```java
+    @GetMapping("/getAutor/{id}")
+	public Autor getAutor(@PathVariable Long id) {
+		return autorRepository.getOne(id);
+	}
+	
+	@PostMapping("/saveAutor")
+	public Autor saveAutor(@RequestBody Autor autor) {
+		return autorRepository.save(autor);
+	}
+	
+	@PutMapping("/updateAutor")
+	public Autor updateAutor(@RequestBody Autor autor) {
+		return autorRepository.save(autor);
+	}
+	
+	@DeleteMapping("/deleteAutor/{id}")
+	public void deleteAutor(@PathVariable Long id) {
+		autorRepository.deleteById(id);
+	}
+```
+7. Ejecutamos el proyecto y abrimos Postman para guardar un autor:
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+    ![Postman](img/post.png)
 
-#### DESARROLLO
+8. Accedemos a la base de datos http://localhost:8080/h2-console 
 
-Agrega las instrucciones generales del ejemplo o reto
+    ![Postman](img/h2.png)
 
-<details>
-	<summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) 
-
-![imagen](https://picsum.photos/200/300)
-
+9. Hacemos una consulta a nuestra tabla Autor para ver el elemento guardado.
 

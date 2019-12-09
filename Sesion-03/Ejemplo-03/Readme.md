@@ -1,28 +1,36 @@
+ ## Ejemplo 03: Consumo de un servicio SOAP
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+### Objetivos
+* Aprender la manera de hacer un servicio SOAP en Spring y probarlo
 
-## Titulo del Ejemplo
+### Prerequisitos
+* Maven
+* JDK 11
+* SoapUI
 
-### OBJETIVO
+### Procedimiento
 
-- Lo que esperamos que el alumno aprenda
+Nota: para este ejemplo ocuparemos los proyectos ejemplo que utiliza la pagina oficial de Spring par el [servidor](https://spring.io/guides/gs/producing-web-service/)
 
-#### REQUISITOS
+1. Entrar a [Git](https://github.com/spring-guides/gs-soap-service.git) donde se encuentra el proyecto del servidor SOAP y clonarlo
+2. Descomprimir el proyecto
+3. Abrir el proyecto que se encuentra en la carpeta "complete" con su IDE preferido y compilarlo, otra opcion es compilarlo y correrlo con Maven:
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+    mvnw spring-boot:run
 
-#### DESARROLLO
+4. Una vez corriento entramos a la siguinte url para ver que esta corriendo el servidor:
 
-Agrega las instrucciones generales del ejemplo o reto
+    http://localhost:8080/ws/countries.wsdl
 
-<details>
-	<summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+5. Abrimos SoapUI y seleccionamos la opcion SOAP y colocamos la informacion que aparece en la imagen:
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) 
+    ![SoapUI](img/soap1.png)
 
-![imagen](https://picsum.photos/200/300)
+6. Seleccionamos el signo de + que se encuentra a lado de getCountry y le damos click a la opcion Request1 y nos aparecea lo siguiente:
 
+    ![SoapUI](img/soap2.png)
+
+7. Sustituimos el signo de ? y colocamos Spain y despues le damos click al boton play y nos devolvera lo siguiente:
+
+    ![SoapUI](img/soap3.png)
 

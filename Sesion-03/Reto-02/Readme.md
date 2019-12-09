@@ -1,29 +1,24 @@
- 
+## Reto 2
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
-	
-## Titulo del Ejemplo 
+### Objetivos
+* Agregar los cambios que se hicieron en AutorController a LibroController
 
-### OBJETIVO 
+Continuamos con el Ejemplo 2
 
-- Lo que esperamos que el alumno aprenda 
+Habra que crear la interfaz `LibroService` y la clase `LibroServiceImpl` y que implemente los metodos de `LibroService` parecidos a los que se hicieron en `AutorService`
 
-#### REQUISITOS 
-
-1. Lo necesario para desarrollar el ejemplo o el Reto 
-
-#### DESARROLLO
-
-Agrega las instrucciones generales del ejemplo o reto
+Y editar la clase `LibroController`
 
 <details>
+  <summary>Solución</summary>
 
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details> 
+  <ol>
+      <li>Creamos la interfaz LibroService con los siguientes metodos<li>
+         <img src="img/figura01.png" alt="Nueva prueba"/>
+      <li>Implemetamos los metodos en la clase LibroServiceImpl</li>
+         <img src="img/figura02.png" alt="Método"/>
+      <li>Hacemos los cambios en LibroController</li>
+         <img src="img/figura03.png" alt="Método"/>
+  </ol>
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una)
-
-![imagen](https://picsum.photos/200/300)
-
+</details>

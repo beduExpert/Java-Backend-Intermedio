@@ -1,29 +1,31 @@
- 
+## Reto 2
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
-	
-## Titulo del Ejemplo 
+### Objetivos
+* Reafirmar el conocimiento de Spring boot
 
-### OBJETIVO 
+En el Ejercicio 2 partimos de un proyecto el cual recibe un Auto
 
-- Lo que esperamos que el alumno aprenda 
+En esta ocasión debemos colocar una nuevo metodo de tipo post y que reciba un objeto de tipo "Casa". 
 
-#### REQUISITOS 
+Para esto creamos la clase con los siguientes atributos:
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+```java
+    private int id;
+    private String color;
+    private int pisos;
+```
 
-#### DESARROLLO
-
-Agrega las instrucciones generales del ejemplo o reto
+En nuestro DemoController crear el metodo con la ruta "/casa" en el proyecto y que imprima el objeto.
 
 <details>
+  <summary>Solución</summary>
 
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details> 
+  <ol>
+      <li>Agrega una nueva clase llamada Casa con la siguiente definición<li>
+         <img src="img/figura01.png" alt="Nueva prueba"/>
+      <li>En DemoController agregamos el nuevo metodo</li>
+         <img src="img/figura02.png" alt="Método"/>
+      <li>Vuelve a ejecutar el proyecto</li>
+  </ol>
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una)
-
-![imagen](https://picsum.photos/200/300)
-
+</details>

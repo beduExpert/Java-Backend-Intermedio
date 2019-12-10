@@ -1,29 +1,14 @@
- 
+## Reto 1: Creando tu propio JAR con Spring Boot
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
-	
-## Titulo del Ejemplo 
+### Objetivo
+1. Reafirmar el proceso para la creación de un JAR mediante el uso de Spring Boot
 
-### OBJETIVO 
+### Requisitos previos
+- JDK
+- Apache Maven
 
-- Lo que esperamos que el alumno aprenda 
-
-#### REQUISITOS 
-
-1. Lo necesario para desarrollar el ejemplo o el Reto 
-
-#### DESARROLLO
-
-Agrega las instrucciones generales del ejemplo o reto
-
-<details>
-
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details> 
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una)
-
-![imagen](https://picsum.photos/200/300)
+### Desarrollo
+En este reto repetirás los pasos para la creación de un JAR ayudándote de Spring Boot, pero deberás crear una aplicación propia que realice las siguientes operaciones:
+- En la ruta /saludo/{nombre} recibirá un nombre y retornará el mensaje: "Hola, {nombre}"
+- En la ruta /numeros mostrará los numeros del 1 al 10
 

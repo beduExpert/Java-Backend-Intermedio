@@ -1,29 +1,28 @@
- 
+## Reto 3: Despliegue en un contenedor Docker
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
-	
-## Titulo del Ejemplo 
+### Objetivo
+1. Desplegar una aplicación Spring Boot mediante un contenedor de Docker
 
-### OBJETIVO 
+### Requisitos previos
+- El JAR generado durante el Ejemplo 1
+- Docker
 
-- Lo que esperamos que el alumno aprenda 
+### Desarrollo 
+1. Una vez que tengamos nuestro archivo jar listo, entraremos a la carpeta raíz de nuestro proyecto.
+2. Crearemos un archivo llamado _Dockerfile_ donde definiremos los pasos necesarios para crear la imagen de nuestra aplicación:
+```
+# Nos basamos en la ultima versión de openjdk
+FROM openjdk:oracle
 
-#### REQUISITOS 
+# Copiamos el archivo jar al contenedor
+COPY target/ejemplo-jar.jar ejemplo-jar.jar
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+# Exponemos el puerto del contenedor para aceptar conexiones
+EXPOSE 8080
 
-#### DESARROLLO
-
-Agrega las instrucciones generales del ejemplo o reto
-
-<details>
-
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details> 
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una)
-
-![imagen](https://picsum.photos/200/300)
-
+# Iniciamos la aplicación
+CMD ["java", "-jar", "ejemplo-jar.jar"]
+```
+3. Ejecutaremos el siguiente comando para generar la imagen de nuestra aplicación: `docker image build -t ejemplo-docker:latest .`, donde el parámetro -t especifica el nombre y etiqueta de la imagen que creamos.
+4. Una vez que se haya terminado de generar la imagen, crearemos un contenedor nuevo y lo ejecutaremos mediante el siguiente comando: `docker container run -p 8080:8080 -d --name contenedor-jar ejemplo-docker`, donde -p publica los puertos de nuestro contenedor, -d ejecuta el contenedor en segundo plano y --name define el nombre de nuestro contenedor.
+5. Finalmente, podemos probar nuestra aplicación accediendo a localhost:8080.

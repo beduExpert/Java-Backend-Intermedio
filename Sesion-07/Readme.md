@@ -1,11 +1,12 @@
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]  
-
-## Titulo de la Sesion 
+## Sesión 07: Spring DevTools y Actuator
 
 ### OBJETIVOS 
 
-- Lo que esperamos que el alumno aprenda al finalizar la sesion 
+- Conocer herramientas de desarrollo que ahorren tiempo útil.
+- Conocer Spring Dev Tools y sus funcionalidades.
+- Conocer Spring Actuator y aplicar ciertos cambios en las aplicaciones java sin necesidad de reiniciar el servidor (desarrollo).
+
 
 #### ORGANIZACION DE LA CLASE 
 
@@ -13,4 +14,7 @@ agrega el programa que se desarrollara con backticks> [agrega la sesion con back
 
 	- [Ejemplo 01](Ejemplo-01)
 	- [Reto 01](Reto-01)
-
+	- [Ejemplo 02](Ejemplo-02)
+	- [Reto 02](Reto-02)
+	- [Ejemplo 03](Ejemplo-03)
+	- [Reto 03](Reto-03)

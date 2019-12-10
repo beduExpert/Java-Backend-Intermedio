@@ -1,28 +1,18 @@
+## Ejemplo 2: Instalando Apache Tomcat
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+### Objetivo
+1. Instalar el servidor Apache Tomcat para poder desplegar aplicaciones web
 
-## Titulo del Ejemplo
+### Requisitos previos
+- Java SE
 
-### OBJETIVO
+### Desarrollo 
+1. Accederemos a la página principal de [Apache Tomcat](https://tomcat.apache.org/) y descargaremos la ultima versión disponible.
 
-- Lo que esperamos que el alumno aprenda
+2. Extraeremos el contenido del zip dentro de una carpeta llamada _tomcat_
 
-#### REQUISITOS
+3. Abriremos una terminal o consola y nos dirigiremos a la carpeta bin dentro del contenido que extrajimos.
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+4. Mediante el comando `catalina.sh run` en Linux o `catalina.bat run` en Windows iniciaremos la ejecución del servidor Tomcat.
 
-#### DESARROLLO
-
-Agrega las instrucciones generales del ejemplo o reto
-
-<details>
-	<summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) 
-
-![imagen](https://picsum.photos/200/300)
-
-
+5. Finalmente, probaremos que funcione correctamente accediendo mendiante nuestro navegador a _localhost:8080_ y comprobando que podemos ver la página de bienvenida de Tomcat.

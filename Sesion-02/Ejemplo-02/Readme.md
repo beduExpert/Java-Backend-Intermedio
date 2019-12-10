@@ -1,28 +1,49 @@
+## Ejemplo 2: Usar Spring boot para crear un microservicio
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+### Objetivos
+* Familiarizarnos con spring boot
 
-## Titulo del Ejemplo
+### Prerequisitos
+* Maven
+* JDK 11
+* Postman
 
-### OBJETIVO
+### Procedimiento
 
-- Lo que esperamos que el alumno aprenda
+1. Crea el proyecto demo con la dependencia de spring web
+2. Crear un paquete llamado "entity" el cual contenga la clase "Auto" con el siguiente codigo:
+```java
+    @Data
+    public class Auto {
+        private int id;
+        private String modelo;
+        private String color;
+        private String marca;
+    }
+```
+3. Crear un paquete llamado "controller" el cual contenga la clase "DemoController" con el siguiente codigo:
+```java
+    @RestController
+    @RequestMapping("/micro")
+    @Slf4j
+    public class DemoController {
+    
+        @PostMapping("/auto")
+        public void recibe(@RequestBody Auto auto){
+            log.info(auto.toString());
+        }
+    }
+```
 
-#### REQUISITOS
+4. Una vez terminado lo ejecutamos y abrimos postman y colocamos la informacion como se ve en la imagen:
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+    ![Postman](../img/post.PNG)
 
-#### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+5. Damos click en Send y se mostrara en consola la informacion que enviamos
 
-<details>
-	<summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) 
 
-![imagen](https://picsum.photos/200/300)
+
 
 

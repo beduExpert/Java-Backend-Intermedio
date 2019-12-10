@@ -1,29 +1,52 @@
- 
+## Reto 2
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
-	
-## Titulo del Ejemplo 
+### Objetivos
+* Enviar un mensaje con un objeto personalizado serializado
 
-### OBJETIVO 
+Srping Kafka nos permite implementar un serializador personalizado. Este debe convertir nuestro objeto en un arreglo de bytes.
 
-- Lo que esperamos que el alumno aprenda 
+Si se opta por esta opción se debe registrar el valor _spring.kafka.produce.value-serializer_ con el serializador.
 
-#### REQUISITOS 
+Sin embargo esto nos limita a enviar ese único tipo de dato. 
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+En este ejercicio optaremos por otra opción.
 
-#### DESARROLLO
-
-Agrega las instrucciones generales del ejemplo o reto
+Usa la clase ObjectMapper de Jackson para serializar un objeto en formato JSON y envíalo como texto.
 
 <details>
+  <summary>Solución</summary>
 
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details> 
+  <ol>
+      <li>Crea una clase POJO para el ejercicio
+        ```java
+       @Data
+       public class DataModel implements Serializable {
+           private String nombre;
+           private Short edad;
+       } 
+        ```
+      </li>
+      <li>En la clase KafkaProducer agrega el siguiente método
+    ```java
+    @SneakyThrows
+    public void sendObject(DataModel object) {
+        sendMessage(mapper.writeValueAsString(object));
+    }
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una)
+    ```
+    donde mapper es una instancia de ObjectMapper;
+      </li>
+    <li>Agrega este método al controlador
+    ```java
+    @PostMapping("/complex")
+    public void sendObjectMesage(@RequestBody DataModel model) {
+        kafkaProducer.sendObject(model);
+    }
+    ```
+    </li>
 
-![imagen](https://picsum.photos/200/300)
+  </ol>
 
+  Inicia el servidor y envía una petición POST.
+
+</details>

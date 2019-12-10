@@ -1,28 +1,20 @@
+## Ejemplo 3: Despliegue detrás de NGINX
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+### Objetivo
+1. Desplegar una aplicación Spring Boot detrás de un proxy inverso de NGINX
 
-## Titulo del Ejemplo
+### Requisitos previos
+- El JAR generado durante el Ejemplo 1
+- NGINX en Linux
 
-### OBJETIVO
+### Desarrollo 
+En este ejemplo realizaremos unicamente el despliegue de nuestra aplicación, sin configurarla para que se inicie como servicio al inicio del sistema.
+1. Nos aseguraremos de que nuestra aplicación esté ejecutándose (`java -jar ejemplo-jar.jar`)
 
-- Lo que esperamos que el alumno aprenda
-
-#### REQUISITOS
-
-1. Lo necesario para desarrollar el ejemplo o el Reto
-
-#### DESARROLLO
-
-Agrega las instrucciones generales del ejemplo o reto
-
-<details>
-	<summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) 
-
-![imagen](https://picsum.photos/200/300)
-
-
+2. Editaremos el archivo `/etc/ngnix/sites-available/default`, buscaremos la sección location y la reemplazaremos con lo siguiente:
+```
+location /ejemplo {
+  proxy_pass http://localhost:8080;
+}
+```
+3. De esta manera, todas las solicitudes que entren a http://localhost/ejemplo serán dirigidas a http://localhost:8080 , podemos probar accediendo a la dirección desde un navegador y comprobando que recibimos el saludo desde nuestra aplicación web.

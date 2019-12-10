@@ -1,29 +1,52 @@
- 
+## Reto 3
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
-	
-## Titulo del Ejemplo 
+### Objetivos
+* Recibir un mensaje y deserializarlo a una clase propia.
 
-### OBJETIVO 
+Srping Kafka nos permite implementar un deserializador personalizado. Este debe convertir un arreglo de bytes a un objeto.
 
-- Lo que esperamos que el alumno aprenda 
+Si se opta por esta opción se debe registrar el valor _spring.kafka.condumer.value-deserializer_ con el deserializador.
 
-#### REQUISITOS 
+Sin embargo esto nos limita a enviar ese único tipo de dato. 
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+En este ejercicio optaremos por otra opción.
 
-#### DESARROLLO
-
-Agrega las instrucciones generales del ejemplo o reto
+Usa la clase ObjectMapper de Jackson para deserializar un objeto en formato JSON recibido como texto.
 
 <details>
+  <summary>Solución</summary>
 
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details> 
+  <ol>
+      <li>Crea una clase POJO para el ejercicio (los atributos deben coincidir con los del Reto 2, ya que lo usaremos como productor).
+        ```java
+       @Data
+       public class MessageModel implements Serializable {
+           private String nombre;
+           private Short edad;
+       } 
+        ```
+      </li>
+      <li>En la clase ModelListener modifica el método de la siguiente manera
+    ```java
+    @KafkaListener(topics = {"bedu-msg"})
+    public void methodListener(String message) {
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una)
+        try {
+            MessageModel messageModel = objectMapper.readerFor(MessageModel.class).readValue(message);
+            log.debug("Mensaje Recibido :: {}", messageModel);
+        } catch (JsonProcessingException e) {
+            log.error("No se pudo instanciar a partir de:: {}", message);
+        }
 
-![imagen](https://picsum.photos/200/300)
+    }
 
+
+    ```
+    donde objectMapper es una instancia de ObjectMapper.
+      </li>
+
+  </ol>
+
+  Inicia el servidor y envía una petición POST a la url definida en el reto anterior.
+
+</details>

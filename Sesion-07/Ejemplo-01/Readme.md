@@ -1,28 +1,57 @@
+## Ejemplo 01: Spring DevTools
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+### Objetivo
+- Conocer algunas funcionalidades de Spring Dev Tools
+- Reducir el tiempo en desarrollo (en la compilación, recarga de aplicación, etc)
 
-## Titulo del Ejemplo
+### Requisitos
+- JDK 8+
+- Maven
 
-### OBJETIVO
+### Desarrollo
+1. Crea un proyecto con spring initializr que contenga las siguientes dependencias:
+- - Lombok
+- - Spring Dev Tools
+- - Spring Web
 
-- Lo que esperamos que el alumno aprenda
+2. Inicia la aplicación
 
-#### REQUISITOS
+3. Crea un paquete de controladores `controllers` dentro del paquete principal y dentro de este agrega el siguiente controlador básico:
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+```java
+package org.bedu.ejemplo01.controllers;
 
-#### DESARROLLO
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-Agrega las instrucciones generales del ejemplo o reto
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-<details>
-	<summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+@RestController
+public class HelloController {
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) 
+	@GetMapping(value = "hello-world")
+	public Message sayHelloWorld() {
+		return new Message("Hola mundo!!!");
+	}
 
-![imagen](https://picsum.photos/200/300)
+	@Data
+	@AllArgsConstructor
+	private class Message {
+		private String message;
+	}
+}
 
+```
+Notas: 
+- Recordar que la anotación `RestController` hace que se retornen respuestas en formato JSON de las entidades POJO por defecto.
 
+4. Guarda cambios y comprueba que la aplicación se ha reiniciado automáticamente.
+
+5. Descarga la extensión livereload para su navegador aquí: http://livereload.com/extensions/
+
+6. Establezca que la extensión puede tener acceso a la url del archivo, al localhost, o a todos los sitios (varía según el navegador).
+
+7. Recargue la página en el navegador una última vez y posteriormente haga click en la extensión (Si se muestran las peticiones de red en la consola del navegador se mostrará que se hizo una petición a un archivo js. Este archivo es el que permite la recarga automática en vivo).
+
+8. Haga algún cambio en el proyecto y observe los cambios en el navegador automáticamente.

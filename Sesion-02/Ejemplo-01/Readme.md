@@ -1,46 +1,76 @@
-## Ejemplo 01: Usar Spring boot para crear un microservicio
+## Ejemplo 01: Usar Spring boot para crear un cliente rest
 
 ### Objetivos
-* Familiarizarnos con spring boot
+* Usar los metodos comunes GET, POST, PUT y DELETE con la clase RestTemplate
 
 ### Prerequisitos
 * Maven
 * JDK 11
-* Postman
 
 ### Procedimiento
 
-1. Crea el proyecto demo con la dependencia de spring web
-2. Crear un paquete llamado "entity" el cual contenga la clase "Auto" con el siguiente codigo:
+1. Crea el proyecto restMetodos con la dependencia de spring web y lombok
+2. Crear la clase `Post` 
 ```java
-    @Data
-    public class Auto {
+   @Data
+    public class Post {
+
+        private int userId; 
         private int id;
-        private String modelo;
-        private String color;
-        private String marca;
-    }
-```
-3. Crear un paquete llamado "controller" el cual contenga la clase "DemoController" con el siguiente codigo:
-```java
-    @RestController
-    @RequestMapping("/micro")
-    @Slf4j
-    public class DemoController {
-    
-        @PostMapping("/auto")
-        public void recibe(@RequestBody Auto auto){
-            log.info(auto.toString());
+        private String title;
+        private String body;
+        
+        public Post() {
+
+        }
+        
+        public Post(int userId, int id,String title, String body) {
+            this.userId = userId;
+            this.id = id;
+            this.title = title;
+            this.body = body;
+        }
+
+
+        public Post(int userId, String title, String body) {
+            this.userId = userId;
+            this.title = title;
+            this.body = body;
         }
     }
 ```
+3. En la clase RestMetodosApplication adentro del metodo main colocamos el siguiente codigo:
+```java
+    //get
+		RestTemplate restTemplate = new RestTemplate();
+		  Post[] posts = restTemplate
+		    .getForObject("https://jsonplaceholder.typicode.com/posts", Post[].class);
+		  
+		  for(Post post : posts) {
+			  System.out.println("GET "+ post);
+		  }
+		  
+		  //post
+		  restTemplate = new RestTemplate();
+		  HttpEntity<Post> request = new HttpEntity<>(new Post(1,"foo", "barr"));
+		  Post post = restTemplate.postForObject("https://jsonplaceholder.typicode.com/posts", request, Post.class);
+		
+		  System.out.println("POST " + post);
+		  
+		//delete
+		  restTemplate.delete("https://jsonplaceholder.typicode.com/posts/1");
+		
+		  
+		//put
+		  restTemplate = new RestTemplate();
+		  request = new HttpEntity<>(new Post(1,1,"foasdldkasdkaso", "barr"));
+		  HttpEntity<Post> response = restTemplate.exchange("https://jsonplaceholder.typicode.com/posts/1", HttpMethod.PUT ,request, Post.class);
+		
+		  System.out.println("PUT " + response.getBody());
+```
 
-4. Una vez terminado lo ejecutamos y abrimos postman y colocamos la informacion como se ve en la imagen:
+4. Una vez terminado lo ejecutamos y vemos que nos imprime en consola el resultado
 
-    ![Postman](../img/post.PNG)
-
-
-5. Damos click en Send y se mostrara en consola la informacion que enviamos
 
 
 

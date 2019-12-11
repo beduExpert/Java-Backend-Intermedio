@@ -10,7 +10,14 @@
 
 #### ORGANIZACION DE LA CLASE 
 
-- Tema que veran en el ejemplo
+- Comprender el funcionamiento de MongoDB.
 	- [Ejemplo 01](Ejemplo-01)
 	- [Reto 01](Reto-01)
-
+	
+- Hacer conexiones a MongoDB usando el framework de Spring.	
+	- [Ejemplo 02](Ejemplo-02)
+	- [Reto 02](Reto-02)
+	
+- Implementar sentencias más QueryMethod
+	- [Ejemplo 03](Ejemplo-03)
+	- [Reto 03](Reto-03)

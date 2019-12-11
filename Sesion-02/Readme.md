@@ -9,15 +9,13 @@
 
 #### ORGANIZACION DE LA CLASE 
 
-- Tema que veran en el ejemplo
-
+- Consumo de servicios web REST
 	- [Ejemplo 01](Ejemplo-01)
 	- [Reto 01](Reto-01)
 
+- Consumo de servicios web SOAP
 	- [Ejemplo 02](Ejemplo-02)
 	- [Reto 02](Reto-02)
 	
-	
+- Consumo de servicio SOAP en Spring	
 	- [Ejemplo 03](Ejemplo-03)
-	- [Reto 03](Reto-03)
-

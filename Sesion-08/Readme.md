@@ -12,14 +12,15 @@
 
 #### ORGANIZACION DE LA CLASE 
 
-- Tema que veran en el ejemplo
-
+- Jar ejecutable usando Spring Boot
 	- [Ejemplo 01](Ejemplo-01)
 	- [Reto 01](Reto-01)
 
+-  Aprender a usar un archivo war de Spring Boot
 	- [Ejemplo 02](Ejemplo-02)
 	- [Reto 02](Reto-02)
 
+- Aprender a desplegar aplicaciones Docker detrás de un servidor NGinx y en un contenedor Docker
 	- [Ejemplo 03](Ejemplo-03)
 	- [Reto 03](Reto-03)
 

@@ -1,29 +1,14 @@
- 
+## Reto 1: 
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
-	
-## Titulo del Ejemplo 
+### Objetivo
+- Conocer los archivos generados por el compilador.
+---
 
-### OBJETIVO 
+### Requisitos
+- JDK 8 (o superior)
+---
 
-- Lo que esperamos que el alumno aprenda 
+### Desarrollo
+1. Explora el archivo `UsersProto.java` generado por la compilación del primer ejemplo. Se Sugiere usar un IDE y buscar las definiciones que se hicieron en el archivo `.proto`. Notar la estructura del proyecto (Métodos y propiedades) que se generaron en la clase java.
 
-#### REQUISITOS 
-
-1. Lo necesario para desarrollar el ejemplo o el Reto 
-
-#### DESARROLLO
-
-Agrega las instrucciones generales del ejemplo o reto
-
-<details>
-
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details> 
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una)
-
-![imagen](https://picsum.photos/200/300)
-
+2. Realizar algún cambio, (p. ej. añadir un message) y compilar nuevamente (Eliminar paquete `models.protos` si es necesario). Y verificar los cambios.

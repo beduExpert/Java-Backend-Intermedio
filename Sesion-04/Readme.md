@@ -1,5 +1,5 @@
 
-## Sesión 03: Spring WebFlux
+## Sesión 04: Spring WebFlux
 
 ### OBJETIVOS 
 
@@ -10,14 +10,11 @@
 
 #### ORGANIZACION DE LA CLASE 
 
-- Tema que veran en el ejemplo
+- Crear un proyecto con Spring WebFlux
+	- [Ejemplo 01](Ejemplo01)
+	- [Reto 01](Reto01)
 
-	- [Ejemplo 01](Ejemplo-01)
-	- [Reto 01](Reto-01)
+- Endpoint de la forma Function Endpoint
+	- [Ejemplo 02](Ejemplo02)
+	- [Reto 02](Reto02)
 	
-	- [Ejemplo 02](Ejemplo-02)
-	- [Reto 02](Reto-02)
-	
-	- [Ejemplo 03](Ejemplo-03)
-	- [Reto 03](Reto-03)
-

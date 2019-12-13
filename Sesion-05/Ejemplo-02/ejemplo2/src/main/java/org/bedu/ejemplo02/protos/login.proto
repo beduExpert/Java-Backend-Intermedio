@@ -1,0 +1,27 @@
+syntax = "proto2";
+
+package org.bedu.ejemplo01.protos;
+
+option java_package = "org.bedu.ejemplo02.protos.models";
+option java_outer_classname = "LoginProto";
+
+message User {
+  required int32 id = 1;
+  required string name = 2;
+  required string email = 3;
+  required string password = 4;
+}
+
+enum Gender {
+    MALE = 0;
+    FEMALE = 1;
+  }
+
+message Student {
+    required int32 id = 1;
+    required User user = 2;
+    required int32 age = 3;
+    required float stature = 4;
+    optional bool certified = 5;
+    required Gender gender = 6;
+}

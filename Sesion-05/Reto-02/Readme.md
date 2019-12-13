@@ -1,29 +1,23 @@
- 
+## Reto 2: 
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
-	
-## Titulo del Ejemplo 
+### Objetivo
+- Poner a prueba conceptos de uso de Spring con protocol Buffers
+---
 
-### OBJETIVO 
+### Requisitos
+- ejemplo02
+---
 
-- Lo que esperamos que el alumno aprenda 
-
-#### REQUISITOS 
-
-1. Lo necesario para desarrollar el ejemplo o el Reto 
-
-#### DESARROLLO
-
-Agrega las instrucciones generales del ejemplo o reto
+### Desarrollo
+1. A partir del ejemplo02, crea las clases (Repositorio/controladores) y modifica las clases necesarias para poder obtener datos del message Student del archivo `.proto`
 
 <details>
+  <summary>Solución</summary>
+  Se propone el siguiente código:
+  <ul>
+      <li><img src="img/protobufconfig.PNG"/><li>
+      <li><img src="img/studentcontroller.PNG"/></li>
+      <li><img src="img/virtualsturep.PNG"/></li>
+  </ul>
 
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details> 
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una)
-
-![imagen](https://picsum.photos/200/300)
-
+</details>

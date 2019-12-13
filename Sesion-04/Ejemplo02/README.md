@@ -1,4 +1,4 @@
-## Usar functional Enpoints de Spring WebFlux
+## Ejemplo 2: Usar functional Enpoints de Spring WebFlux
 
 ### Objetivos
 * Usar functional Enpoints de Spring WebFlux
@@ -22,11 +22,3 @@
 3. Abrimos una consola y ejecutamos con Curl la URL
 
     http://localhost:8080/numeros
-
-
-
-
-
-
-
-

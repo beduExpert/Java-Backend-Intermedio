@@ -1,6 +1,3 @@
-
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]  
-
 ## Sesión 3: Protocol Buffers
 
 ### OBJETIVOS 

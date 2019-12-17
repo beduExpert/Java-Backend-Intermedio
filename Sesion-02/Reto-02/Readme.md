@@ -1,31 +1,30 @@
 ## Reto 2
 
 ### Objetivos
-* Reafirmar el conocimiento de Spring boot
+* Enviar en un metodo POST un JSON con un objeto anidado
+* En el metodo GET mapear el objeto anidado
 
-En el Ejercicio 2 partimos de un proyecto el cual recibe un Auto
+Descargar el nuevo servidor local que se ocupara en este reto
 
-En esta ocasión debemos colocar una nuevo metodo de tipo post y que reciba un objeto de tipo "Casa". 
+Corremos el proyecto y para ver que esta corriendo entramos a la liga http://localhost:8081/ :
 
-Para esto creamos la clase con los siguientes atributos:
+Ocupar el proyecto del ejemplo 2 agregando una nueva clase llamada `Phone` el cual solo tendra el atributo "number" de tipo int.
 
-```java
-    private int id;
-    private String color;
-    private int pisos;
-```
+Y la clase `User` debera tener un atributo de tipo lista de clase `Phone` y que se llame "phones".
 
-En nuestro DemoController crear el metodo con la ruta "/casa" en el proyecto y que imprima el objeto.
+Hacer las modificacion en el metodo main para que se envie junto con el user un phone o varios.
 
 <details>
   <summary>Solución</summary>
 
   <ol>
-      <li>Agrega una nueva clase llamada Casa con la siguiente definición<li>
-         <img src="img/figura01.png" alt="Nueva prueba"/>
-      <li>En DemoController agregamos el nuevo metodo</li>
-         <img src="img/figura02.png" alt="Método"/>
-      <li>Vuelve a ejecutar el proyecto</li>
+      <li>Creamos las siguiente clase: <li>
+         <img src="img/phone.png" alt="Nueva clase"/>
+      <li>Modificamos la clase User: <li>
+         <img src="img/user.png" alt="Nueva clase"/>
+      <li>En el metodo main hacemos las modificaciones</li>
+        <img src="img/main.png" alt="Nueva clase"/> 
+      <li>Ejecutar el proyecto</li>
   </ol>
 
 </details>

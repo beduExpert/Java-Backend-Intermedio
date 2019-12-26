@@ -1,29 +1,62 @@
+## Postwork Sesión 02:
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+A lo largo de este proyecto reafirmaremos lo que se ha aprendido durante las sesiones.
 
-## Titulo del Ejemplo
+### Módulo 2 - Consumo REST-SOAP
 
-### OBJETIVO
+Continuamos con el postwork de la sesion 1
 
-- Lo que esperamos que el alumno aprenda
+Ahora lo que haremos es consumir un servicio para llenar el documento de Pacientes (Patient). Entramos a la siguiente URL https://www.mocky.io/ ,en la cual agregaremos el siguiente cuerpo:
 
-#### REQUISITOS
+```json
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+[
+    {
+        "name": "Alfredo",
+        "lastname": "Hernandez",
+        "birthday": "1990-02-15",
+        "stature": 173,
+        "weigth": 72
+    },
+    {
+        "name": "Luis",
+        "lastname": "Hernandez",
+        "birthday": "1990-02-15",
+        "stature": 183,
+        "weigth": 82
+    },
+    {
+        "name": "David",
+        "lastname": "Hernandez",
+        "birthday": "1990-02-15",
+        "stature": 163,
+        "weigth": 65
+    },
+    {
+        "name": "Anabel",
+        "lastname": "Hernandez",
+        "birthday": "1990-02-15",
+        "stature": 163,
+        "weigth": 60
+    },
+    {
+        "name": "Viridiana",
+        "lastname": "Hernandez",
+        "birthday": "1990-02-15",
+        "stature": 173,
+        "weigth": 72
+    },
+    {
+        "name": "Carolina",
+        "lastname": "Hernandez",
+        "birthday": "1990-02-15",
+        "stature": 180,
+        "weigth": 75
+    }
 
-#### DESARROLLO
+]
+```
+Damos click en Generate my HTTP Response y arriba nos aparecera el link que ocuparemos.
 
-Agrega las instrucciones generales del ejemplo o reto
-
-<details>
-
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agreges al menos una)
-
-![imagen](https://picsum.photos/200/300)
-
+Deberan crear un servicio que haga el trabajo del mapping y guardado de los pacientes que devuelve el JSON, llamar el metodo en su clase principal (metodo run) 
 

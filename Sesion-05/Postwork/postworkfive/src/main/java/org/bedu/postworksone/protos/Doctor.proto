@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package postwork;
+
+option java_package = "org.bedu.postworksone.protos.models";
+option java_outer_classname = "DoctorProto";
+
+message Doctor {
+    required string id = 1;
+    required string name = 2;
+    required string lastname = 3;
+    required string birthday = 4;
+    required bool specialized = 5;
+    optional string speciality = 6;
+    required int32 yearsExperience = 7;
+}

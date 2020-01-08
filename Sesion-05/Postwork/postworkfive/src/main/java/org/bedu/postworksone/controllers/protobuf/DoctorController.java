@@ -13,7 +13,7 @@ import reactor.core.publisher.Mono;
 
 @RestController("doctorControllerProtobuf")
 @RequestMapping("/protobuf/doctor")
-@RequiredArgsConstructor(onConstructor_ = {@Autowired})
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class DoctorController {
 
     private final DoctorService doctorService;

@@ -1,29 +1,16 @@
+## Postwork Sesión 08: Deploy en el ambiente productivo
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+### Objetivo
+- Incluir los conocimientos adquiridos durante la sesión en un proyecto que simule uno en la vida real.
 
-## Titulo del Ejemplo
+### Desarrollo
 
-### OBJETIVO
+Una vez que se han realizado todos los cambios necesarios a la aplicación durante las sesiones anteriores, el hospital está listo para hacer el despligue en un ambiente productivo y que todos los médicos puedan utilizarla.
 
-- Lo que esperamos que el alumno aprenda
+En su infraestructura el hospital cuenta con un servidor basado en contenedores de Docker, sobre los que se monta cada uno de los servicios.
 
-#### REQUISITOS
+Analiza el ambiente planteado, responde a las siguientes preguntas y después realiza los pasos necesarios para desplegar la aplicación.
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
-
-#### DESARROLLO
-
-Agrega las instrucciones generales del ejemplo o reto
-
-<details>
-
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agreges al menos una)
-
-![imagen](https://picsum.photos/200/300)
-
+- ¿Qué tipo de despliegue requerirá el proyecto?
+- ¿Qué pasos deben llevarse a cabo para desplegar correctamente la aplicación en la infraestructura del hospital?
 
